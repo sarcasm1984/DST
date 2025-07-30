@@ -1,6 +1,6 @@
 # Data Structures in TypeScript
 
-A comprehensive collection of data structures and algorithms implemented in TypeScript with full test coverage.
+A comprehensive collection of data structures implemented in TypeScript with full test coverage.
 
 ## 📚 Data Structures Implemented
 

@@ -1,5 +1,5 @@
 {
-  "name": "data-structures-typescript",
+  "name": "dst-typescript-collection",
   "version": "1.0.0",
   "description": "A comprehensive collection of data structures implemented in TypeScript with full test coverage",
   "main": "dist/index.js",

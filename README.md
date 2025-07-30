@@ -1,4 +1,4 @@
-# Data Structures and Algorithms in TypeScript
+# Data Structures in TypeScript
 
 A comprehensive collection of data structures and algorithms implemented in TypeScript with full test coverage.
 

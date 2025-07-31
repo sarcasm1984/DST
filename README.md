@@ -37,19 +37,27 @@ A comprehensive collection of data structures implemented in TypeScript with ful
 - Traversal: preorder, postorder, level order
 - Methods: `addChild()`, `remove()`, `getHeight()`, `getDepth()`, `isBalanced()`
 
-### 7. **Graph** (`MyGraph`)
+### 7. **Binary Search Tree** (`MyBST`)
+- Binary search tree with efficient search and insertion
+- BST property: left child < parent < right child
+- Traversal: inorder (sorted), preorder, postorder, level order
+- Methods: `insert()`, `search()`, `remove()`, `findMin()`, `findMax()`
+- BST-specific: `isValidBST()`, `isBalanced()`, `getSuccessor()`, `getPredecessor()`
+- Loop detection: `hasLoop()`, `getLoopCount()`, `getLoopData()`, `getLoopNodes()`
+
+### 8. **Graph** (`MyGraph`)
 - Directed and undirected graph support
 - Weighted edges with customizable weights
 - Algorithms: DFS, BFS, shortest path, cycle detection, topological sort
 - Methods: `addVertex()`, `addEdge()`, `hasPath()`, `getConnectedComponents()`
 
-### 8. **Heap** (`MyHeap`)
+### 9. **Heap** (`MyHeap`)
 - Min/Max heap with priority queue functionality
 - Configurable comparison functions
 - Operations: insert, extract, peek
 - Methods: `getMin()`, `getMax()`, `getKthElement()`, `isValid()`
 
-### 9. **Trie** (`MyTrie`)
+### 10. **Trie** (`MyTrie`)
 - Prefix tree for efficient string operations
 - Pattern matching and autocomplete functionality
 - Methods: `insert()`, `search()`, `startsWith()`, `getWordsWithPrefix()`
@@ -95,8 +103,8 @@ npm run test:coverage
 ```
 
 ### Test Coverage
-- **9 Test Suites**: All data structures
-- **394 Tests**: Comprehensive coverage
+- **10 Test Suites**: All data structures
+- **462 Tests**: Comprehensive coverage
 - **100% Pass Rate**: All tests passing
 
 ## 📁 Project Structure
@@ -111,6 +119,7 @@ DST/
 │   │   ├── MyQueue.ts
 │   │   ├── MySet.ts
 │   │   ├── MyTree.ts
+│   │   ├── MyBST.ts
 │   │   ├── MyGraph.ts
 │   │   ├── MyHeap.ts
 │   │   └── MyTrie.ts
@@ -121,6 +130,7 @@ DST/
 │   │   ├── MyQueue.test.ts
 │   │   ├── MySet.test.ts
 │   │   ├── MyTree.test.ts
+│   │   ├── MyBST.test.ts
 │   │   ├── MyGraph.test.ts
 │   │   ├── MyHeap.test.ts
 │   │   └── MyTrie.test.ts
@@ -194,6 +204,20 @@ tree.addToRoot(1);
 tree.addChild(1, 2);
 tree.addChild(1, 3);
 console.log(tree.preorder()); // [1, 2, 3]
+```
+
+### Binary Search Tree
+```typescript
+import { MyBST } from './src/DataStructures/MyBST';
+
+const bst = new MyBST<number>();
+bst.insert(5);
+bst.insert(3);
+bst.insert(7);
+console.log(bst.inorder()); // [3, 5, 7] (sorted)
+console.log(bst.findMin()); // 3
+console.log(bst.findMax()); // 7
+console.log(bst.hasLoop()); // false (no loops in normal BST)
 ```
 
 ### Graph

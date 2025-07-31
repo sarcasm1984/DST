@@ -18,6 +18,9 @@ export { MySet } from './DataStructures/MySet';
 // Tree (Multi-child)
 export { MyTree } from './DataStructures/MyTree';
 
+// Binary Search Tree
+export { MyBST } from './DataStructures/MyBST';
+
 // Graph
 export { MyGraph } from './DataStructures/MyGraph';
 

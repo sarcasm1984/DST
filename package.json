@@ -1,6 +1,6 @@
 {
   "name": "dst-typescript-collection",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🚀 Complete TypeScript Data Structures Library: Linked List, Hash Map, Stack, Queue, Set, Tree, BST, Graph, Heap, Trie with 100% test coverage, loop detection, and comprehensive algorithms. Perfect for DSA learning, interviews, and production use.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -21,6 +21,12 @@ export { MyTree } from './DataStructures/MyTree';
 // Binary Search Tree
 export { MyBST } from './DataStructures/MyBST';
 
+// AVL Tree
+export { MyAVLTree } from './DataStructures/MyAVLTree';
+
+// Red-Black Tree
+export { MyRedBlackTree } from './DataStructures/MyRedBlackTree';
+
 // Graph
 export { MyGraph } from './DataStructures/MyGraph';
 

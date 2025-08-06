@@ -45,19 +45,35 @@ A comprehensive collection of data structures implemented in TypeScript with ful
 - BST-specific: `isValidBST()`, `isBalanced()`, `getSuccessor()`, `getPredecessor()`
 - Loop detection: `hasLoop()`, `getLoopCount()`, `getLoopData()`, `getLoopNodes()`
 
-### 8. **Graph** (`MyGraph`)
+### 8. **AVL Tree** (`MyAVLTree`)
+- Self-balancing binary search tree with height balance
+- AVL property: height difference between left and right subtrees ≤ 1
+- Automatic rebalancing through rotations (left, right, left-right, right-left)
+- Methods: `insert()`, `search()`, `remove()`, `findMin()`, `findMax()`
+- AVL-specific: `isValidAVL()`, `isBalanced()`, `getNodeBalanceFactor()`, `getNodeHeight()`
+- Traversal: inorder (sorted), preorder, postorder, level order
+
+### 9. **Red-Black Tree** (`MyRedBlackTree`)
+- Self-balancing binary search tree with color properties
+- Red-Black properties: root is black, red nodes can't have red children, equal black height
+- Automatic rebalancing through color changes and rotations
+- Methods: `insert()`, `search()`, `remove()`, `findMin()`, `findMax()`
+- RB-specific: `isValidRedBlack()`, `getNodeColor()`, `isRed()`, `isBlack()`, `getParent()`, `getSibling()`, `getUncle()`
+- Traversal: inorder (sorted), preorder, postorder, level order
+
+### 10. **Graph** (`MyGraph`)
 - Directed and undirected graph support
 - Weighted edges with customizable weights
 - Algorithms: DFS, BFS, shortest path, cycle detection, topological sort
 - Methods: `addVertex()`, `addEdge()`, `hasPath()`, `getConnectedComponents()`
 
-### 9. **Heap** (`MyHeap`)
+### 11. **Heap** (`MyHeap`)
 - Min/Max heap with priority queue functionality
 - Configurable comparison functions
 - Operations: insert, extract, peek
 - Methods: `getMin()`, `getMax()`, `getKthElement()`, `isValid()`
 
-### 10. **Trie** (`MyTrie`)
+### 12. **Trie** (`MyTrie`)
 - Prefix tree for efficient string operations
 - Pattern matching and autocomplete functionality
 - Methods: `insert()`, `search()`, `startsWith()`, `getWordsWithPrefix()`
@@ -103,8 +119,8 @@ npm run test:coverage
 ```
 
 ### Test Coverage
-- **10 Test Suites**: All data structures
-- **462 Tests**: Comprehensive coverage
+- **12 Test Suites**: All data structures
+- **523 Tests**: Comprehensive coverage
 - **100% Pass Rate**: All tests passing
 
 ## 📁 Project Structure
@@ -120,6 +136,8 @@ DST/
 │   │   ├── MySet.ts
 │   │   ├── MyTree.ts
 │   │   ├── MyBST.ts
+│   │   ├── MyAVLTree.ts
+│   │   ├── MyRedBlackTree.ts
 │   │   ├── MyGraph.ts
 │   │   ├── MyHeap.ts
 │   │   └── MyTrie.ts
@@ -131,6 +149,8 @@ DST/
 │   │   ├── MySet.test.ts
 │   │   ├── MyTree.test.ts
 │   │   ├── MyBST.test.ts
+│   │   ├── MyAVLTree.test.ts
+│   │   ├── MyRedBlackTree.test.ts
 │   │   ├── MyGraph.test.ts
 │   │   ├── MyHeap.test.ts
 │   │   └── MyTrie.test.ts
@@ -218,6 +238,36 @@ console.log(bst.inorder()); // [3, 5, 7] (sorted)
 console.log(bst.findMin()); // 3
 console.log(bst.findMax()); // 7
 console.log(bst.hasLoop()); // false (no loops in normal BST)
+```
+
+### AVL Tree
+```typescript
+import { MyAVLTree } from './src/DataStructures/MyAVLTree';
+
+const avl = new MyAVLTree<number>();
+avl.insert(5);
+avl.insert(3);
+avl.insert(7);
+avl.insert(1);
+console.log(avl.inorder()); // [1, 3, 5, 7] (sorted)
+console.log(avl.isBalanced()); // true (always balanced)
+console.log(avl.getNodeBalanceFactor(5)); // 0 (balanced)
+```
+
+### Red-Black Tree
+```typescript
+import { MyRedBlackTree } from './src/DataStructures/MyRedBlackTree';
+
+const rbt = new MyRedBlackTree<number>();
+rbt.insert(10);
+rbt.insert(5);
+rbt.insert(15);
+rbt.insert(3);
+rbt.insert(7);
+console.log(rbt.inorder()); // [3, 5, 7, 10, 15] (sorted)
+console.log(rbt.isValidRedBlack()); // true (validates RB properties)
+console.log(rbt.getNodeColor(10)); // 'BLACK' (root is black)
+console.log(rbt.isRed(5)); // true (some nodes are red)
 ```
 
 ### Graph
